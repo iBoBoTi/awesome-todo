@@ -1,10 +1,12 @@
 package todo
 
 import (
+	"bufio"
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
 	"log"
+	"os"
 	"strings"
 )
 
@@ -164,4 +166,10 @@ func DeleteToDo(todoNum int) {
 	if err != nil {
 		log.Fatal(err)
 	}
+}
+
+func ReadFromStdin() string {
+	reader := bufio.NewReader(os.Stdin)
+	text, _ := reader.ReadString('\n')
+	return strings.TrimSpace(text)
 }

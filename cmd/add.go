@@ -26,6 +26,11 @@ var AddCmd = &cobra.Command{
 	Use:   "add",
 	Short: "adds a new task to the todo list",
 	Run: func(cmd *cobra.Command, args []string) {
+		if len(args) == 0 {
+			// read from stdin and add to todo list
+			todo.AddToDo(todo.ReadFromStdin())
+			return
+		}
 		todo.AddToDo(args[0])
 	},
 }

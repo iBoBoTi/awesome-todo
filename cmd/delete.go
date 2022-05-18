@@ -23,10 +23,10 @@ import (
 	"github.com/spf13/cobra"
 )
 
-// todoDeleteCmd represents the todoDelete command
+// DeleteCmd represents the delete command
 var DeleteCmd = &cobra.Command{
-	Use:   "Delete",
-	Short: "deletes a task from the todo list",
+	Use:   "delete",
+	Short: "removes a task from the todo list",
 	Run: func(cmd *cobra.Command, args []string) {
 		todoNum, err := strconv.Atoi(args[0])
 		if err != nil {

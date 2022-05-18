@@ -21,9 +21,9 @@ import (
 	"github.com/spf13/cobra"
 )
 
-// todoListCmd represents the todoList command
+// ListCmd represents the list command
 var ListCmd = &cobra.Command{
-	Use:   "List",
+	Use:   "list",
 	Short: "shows all tasks both completed and not completed",
 	Run: func(cmd *cobra.Command, args []string) {
 		todo.ListToDo()

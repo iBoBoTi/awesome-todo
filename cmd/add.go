@@ -21,7 +21,7 @@ import (
 	"github.com/spf13/cobra"
 )
 
-// todoAddCmd represents the todoAdd command
+// AddCmd represents the add command
 var AddCmd = &cobra.Command{
 	Use:   "add",
 	Short: "adds a new task to the todo list",

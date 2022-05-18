@@ -16,22 +16,22 @@ limitations under the License.
 package cmd
 
 import (
-	"fmt"
+	"github.com/iBoBoTi/awesome-todo/todo"
 
 	"github.com/spf13/cobra"
 )
 
 // todoAddCmd represents the todoAdd command
-var todoAddCmd = &cobra.Command{
-	Use:   "todoAdd",
-	Short: "todoAdd adds a new task to the todo list",
+var AddCmd = &cobra.Command{
+	Use:   "add",
+	Short: "adds a new task to the todo list",
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("todoAdd called")
+		todo.AddToDo(args[0])
 	},
 }
 
 func init() {
-	rootCmd.AddCommand(todoAddCmd)
+	rootCmd.AddCommand(AddCmd)
 
 	// Here you will define your flags and configuration settings.
 

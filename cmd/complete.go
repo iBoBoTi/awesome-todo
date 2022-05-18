@@ -16,22 +16,29 @@ limitations under the License.
 package cmd
 
 import (
-	"fmt"
+	"github.com/iBoBoTi/awesome-todo/todo"
+	"log"
+	"strconv"
 
 	"github.com/spf13/cobra"
 )
 
 // todoCompleteCmd represents the todoComplete command
-var todoCompleteCmd = &cobra.Command{
-	Use:   "todoComplete",
-	Short: "todoComplete is used to mark a todo as complete",
+var CompleteCmd = &cobra.Command{
+	Use:   "Complete",
+	Short: "marks a todo as complete",
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("todoComplete called")
+		todoNum, err := strconv.Atoi(args[0])
+		if err != nil {
+			log.Fatal("Invalid todo number")
+			return
+		}
+		todo.CompleteToDo(todoNum)
 	},
 }
 
 func init() {
-	rootCmd.AddCommand(todoCompleteCmd)
+	rootCmd.AddCommand(CompleteCmd)
 
 	// Here you will define your flags and configuration settings.
 

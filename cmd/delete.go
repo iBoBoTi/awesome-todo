@@ -16,22 +16,29 @@ limitations under the License.
 package cmd
 
 import (
-	"fmt"
+	"github.com/iBoBoTi/awesome-todo/todo"
+	"log"
+	"strconv"
 
 	"github.com/spf13/cobra"
 )
 
 // todoDeleteCmd represents the todoDelete command
-var todoDeleteCmd = &cobra.Command{
-	Use:   "todoDelete",
-	Short: "todoDelete is used to delete a task from the todo list",
+var DeleteCmd = &cobra.Command{
+	Use:   "Delete",
+	Short: "deletes a task from the todo list",
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("todoDelete called")
+		todoNum, err := strconv.Atoi(args[0])
+		if err != nil {
+			log.Fatal("Invalid todo number")
+			return
+		}
+		todo.DeleteToDo(todoNum)
 	},
 }
 
 func init() {
-	rootCmd.AddCommand(todoDeleteCmd)
+	rootCmd.AddCommand(DeleteCmd)
 
 	// Here you will define your flags and configuration settings.
 

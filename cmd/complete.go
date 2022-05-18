@@ -23,9 +23,9 @@ import (
 	"github.com/spf13/cobra"
 )
 
-// todoCompleteCmd represents the todoComplete command
+// CompleteCmd represents the complete command
 var CompleteCmd = &cobra.Command{
-	Use:   "Complete",
+	Use:   "complete",
 	Short: "marks a todo as complete",
 	Run: func(cmd *cobra.Command, args []string) {
 		todoNum, err := strconv.Atoi(args[0])

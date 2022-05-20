@@ -6,11 +6,6 @@
 			"is_complete": true
 		},
 		{
-			"id": 5,
-			"title": "meditate",
-			"is_complete": false
-		},
-		{
 			"id": 11,
 			"title": "do some exercise",
 			"is_complete": false
@@ -38,12 +33,7 @@
 		{
 			"id": 20,
 			"title": "say a prayer",
-			"is_complete": false
-		},
-		{
-			"id": 21,
-			"title": "do some exercise",
-			"is_complete": false
+			"is_complete": true
 		},
 		{
 			"id": 22,
@@ -62,6 +52,41 @@
 		},
 		{
 			"id": 29,
+			"title": "meditate",
+			"is_complete": false
+		},
+		{
+			"id": 30,
+			"title": "say a prayer",
+			"is_complete": false
+		},
+		{
+			"id": 31,
+			"title": "do some exercise",
+			"is_complete": false
+		},
+		{
+			"id": 32,
+			"title": "take tea",
+			"is_complete": true
+		},
+		{
+			"id": 33,
+			"title": "say a prayer",
+			"is_complete": false
+		},
+		{
+			"id": 34,
+			"title": "do some exercise",
+			"is_complete": false
+		},
+		{
+			"id": 35,
+			"title": "take tea",
+			"is_complete": false
+		},
+		{
+			"id": 36,
 			"title": "meditate",
 			"is_complete": false
 		}

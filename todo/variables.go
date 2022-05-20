@@ -31,7 +31,6 @@ func AddToDo(task string) {
 	task = strings.TrimSpace(strings.ToLower(task))
 	file, err := ioutil.ReadFile("todos.json")
 	if err != nil {
-		log.Println("I got here")
 		log.Fatal(err)
 	}
 
